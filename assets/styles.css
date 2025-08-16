@@ -1,0 +1,46 @@
+:root{--blue:#0b4a8b;--green:#1e9e49;--text:#0b1b2b}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92vw);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid #e6edf5}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand img{height:42px}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{font-weight:600;color:#0f2233}
+.btn{display:inline-block;background:var(--green);color:#fff;border-radius:999px;padding:10px 16px;font-weight:800}
+.btn.btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
+.hero{position:relative;min-height:70vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,25,41,.70),rgba(11,25,41,.25))}
+.hero-content{position:relative;z-index:1;padding:56px 0}
+.eyebrow{letter-spacing:.12em;font-weight:800;font-size:.85rem;color:#a7f3d0;margin:0 0 .4rem}
+.hero h1{margin:.2rem 0 .5rem;font-size:clamp(28px,4vw,54px);line-height:1.07}
+.sub{opacity:.95;max-width:800px}
+.cta-row{display:flex;gap:12px;margin-top:14px}
+.band{padding:clamp(28px,5vw,48px) 0}
+.band-white{background:#fff}
+.band-image{position:relative;background-image:url('public/img/banda-agua.jpg');background-size:cover;background-position:center;color:#fff;min-height:240px;display:flex;align-items:center}
+.band-image .band-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,25,41,.55),rgba(11,25,41,.15))}
+.band-green{background:linear-gradient(0deg,#1b934e,#1ca75a);color:#fff}
+.band-slogan{position:relative;font-weight:800;font-size:clamp(18px,2.2vw,26px);margin:0}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid #e2e8f0;border-radius:14px;padding:18px;background:#f7fafc;box-shadow:0 10px 25px rgba(13,51,89,.06);cursor:pointer;transition:.15s transform ease,.15s box-shadow ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(13,51,89,.09)}
+.card-ico{font-size:24px}
+.card h3{margin:.35rem 0 .2rem}
+.card-brief{margin:0;color:#4b6578;font-weight:600}
+.partners{display:flex;flex-wrap:wrap;gap:56px;justify-content:center;align-items:center}
+.partner img{height:48px;width:auto;opacity:.95;transition:transform .2s ease,opacity .2s ease}
+.partner:hover img{transform:translateY(-2px);opacity:1}
+.footer{background:#0a1220;color:#cbd5e1;padding:26px 0}
+.footer a{color:#fff}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
+.modal.open{display:flex}
+.modal-panel{background:#fff;border-radius:16px;width:min(900px,94vw);max-height:85vh;overflow:auto;box-shadow:0 24px 80px rgba(0,0,0,.28);padding:20px 22px;position:relative}
+.modal-title{margin:0 0 .5rem}
+.modal-text{white-space:pre-wrap;line-height:1.45}
+.modal-close{position:absolute;top:10px;right:12px;border:0;background:#e6edf5;border-radius:8px;padding:4px 8px;cursor:pointer}

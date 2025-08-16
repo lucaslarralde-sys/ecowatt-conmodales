@@ -1,0 +1,1 @@
+Colocá tu video en public/video/hero.mp4. Publicar en Netlify sin build.
